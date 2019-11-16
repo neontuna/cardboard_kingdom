@@ -3,7 +3,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
     create_table :products do |t|
       t.string :title
       t.string :description
-      t.integer :price_cents
+      t.integer :price_cents, null: false, default: 0
 
       t.timestamps
     end
