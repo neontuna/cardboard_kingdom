@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-  <div class="card-columns">
+  <div class="row">
     <% @products.each do |product| %>
-      <div class="card">
-        <%= image_tag product.image.variant(resize_to_limit: [400, 400]), width: "100%" %>
-        <div class="card-body">
-          <h5 class="card-title"><%= product.title %></h5>
-          <p class="card-text"><%= product.description %></p>
+      <div class="col-sm-4">      
+        <div class="card mb-3">
+          <%= image_tag product.image.variant(resize_to_limit: [400, 400]), width: "100%" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= product.title %></h5>
+            <p class="card-text"><%= product.description %></p>
+          </div>
+          <div class="card-footer text-white bg-secondary"><%= product.price.format %></div>
         </div>
-        <div class="card-footer bg-transparent border-success"><%= product.price_cents %></div>
       </div>
     <% end %>
   </div>
