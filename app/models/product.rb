@@ -11,6 +11,8 @@
 #
 
 class Product < ApplicationRecord
+  has_one_attached :image
+  
   validates :title, length: { in: 2..40 }
   validates :description, length: { in: 2..400 }
   validates :price_cents, presence: true

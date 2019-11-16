@@ -15,5 +15,10 @@
   <%= @product.price_cents %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@product.image.variant(resize_to_limit: [175, 175])) %>
+</p>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
