@@ -53,3 +53,5 @@ gem "aws-sdk-s3", require: false
 gem 'image_processing', '~> 1.2'
 gem 'money-rails', '~>1.12'
 gem 'devise'
+gem 'administrate'
+gem 'administrate-field-active_storage'
