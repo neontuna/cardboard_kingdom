@@ -52,3 +52,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "aws-sdk-s3", require: false
 gem 'image_processing', '~> 1.2'
 gem 'money-rails', '~>1.12'
+gem 'devise'
