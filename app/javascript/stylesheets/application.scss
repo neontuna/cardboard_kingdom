@@ -39,3 +39,48 @@ $primary: #8e24aa;
 @import '~bootstrap/scss/_tooltip.scss';
 @import '~bootstrap/scss/_transitions.scss';
 @import '~bootstrap/scss/_utilities.scss';
+
+@import '@fortawesome/fontawesome-free';
+
+@include media-breakpoint-down(xs) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+body > .alert {
+  margin-bottom: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px; 
+}
+
+body > .container {
+  padding: 30px 15px 15px;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1400px;
+    }
+}

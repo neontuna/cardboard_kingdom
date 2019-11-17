@@ -12,6 +12,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/navbar' %>
+    
+    <% flash.each do |msg_type, message| %>
+      <div class="alert fadeout <%= bootstrap_class_for(msg_type) %>" style="border-radius: 0;">
+        <div class="container">
+          <%= message %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <%= render 'shared/footer' %>
   </body>
 </html>

@@ -22,7 +22,7 @@ Product.create(
     description: 'Try to be the dominant force on the island of Catan by building settlements, cities, and roads.',
     price_cents: 4999
   }
-).image.attach(io: File.open("#{Rails.root}/lib/assets/images/catan.jpeg"), filename: "catan.jpeg")
+).image.attach(io: File.open("#{Rails.root}/lib/assets/images/catan.jpg"), filename: "catan.jpg")
 
 Product.create(
   {
