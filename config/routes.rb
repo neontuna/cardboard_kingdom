@@ -12,5 +12,12 @@ Rails.application.routes.draw do
   end
   
   resources :products, only: [:index]
+  resources :checkouts, only: [:create] do
+    collection do
+      get 'success'
+      get 'cancel'
+    end
+  end
+  
   root to: 'products#index'
 end
