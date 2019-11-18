@@ -1,9 +1,10 @@
 module Stripe
   class CreateCheckout
     def run(product_for_purchase)
-      ::Stripe.api_key = 'sk_test_2RCwmbHKQTc2eoUySE3SGUQX00uj7faOK1'
+      ::Stripe.api_key = Rails.application.credentials.dig(:stripe, :secret_key)
 
       session = ::Stripe::Checkout::Session.create(
+        billing_address_collection: 'required',
         payment_method_types: ['card'],
         line_items: [{
           name: product_for_purchase.title,
